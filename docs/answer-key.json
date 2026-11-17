@@ -1,0 +1,942 @@
+{
+  "claims": {
+    "C01": {
+      "company": "Corvanta Bioscience Ltd",
+      "grade": "A",
+      "valid": true,
+      "issues": [],
+      "strengths": [
+        "Specific baseline (epoxy-resin transaminases lose 40-70% activity in 100-150 h)",
+        "Documented failures (PEI-PLP route abandoned Aug 2024; variant aggregation)",
+        "Honest partial outcome on P2 (rho 0.52 vs 0.6 target)",
+        "Explicitly excludes paid feasibility studies, GMP docs, patent costs",
+        "ELN timesheets reconciled; CEO/lab manager claimed as QIAs with minutes",
+        "ERIS intensity 35.3% genuine"
+      ],
+      "claimed_qe": 599709,
+      "correct_qe": 599709,
+      "claimed_scheme": "eris",
+      "correct_scheme": "eris",
+      "claimed_benefit": 161742,
+      "correct_benefit": 161742,
+      "corrected_intensity_pct": 35.3,
+      "disallowed_cost_lines": [],
+      "staff_adjustments": []
+    },
+    "C02": {
+      "company": "Thistlebrook Precision Engineering Ltd",
+      "grade": "B",
+      "valid": true,
+      "issues": [
+        "Post-resolution production batches B-423..425 (sold) claimed as 'validation builds': powder \u00a361,500 + operator uplift",
+        "Overseas subcontractor (German CT lab) chosen for cost/turnaround: breaches overseas restriction",
+        "Simulation licences at 100% though also used for quoting",
+        "ERP/Microsoft 365 licences claimed",
+        "MD at 25% on the basis of 4 meetings",
+        "Year-end manager estimates rather than timesheets (weak but acceptable)"
+      ],
+      "claimed_qe": 527495,
+      "correct_qe": 373296,
+      "claimed_scheme": "merged-profit",
+      "correct_scheme": "merged-profit",
+      "claimed_benefit": 79124,
+      "correct_benefit": 55994,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "Consumables",
+          "desc": "Ti powder \u2013 validation builds B-423 to B-425",
+          "claimed": 61500,
+          "ok": 0,
+          "note": "production stock; sold to customer"
+        },
+        {
+          "cat": "Subcontract (unconnected)",
+          "desc": "Pr\u00e4zisionsmesstechnik Halde GmbH \u2013 CT scanning \u00a348,000 x 65%",
+          "claimed": 31200,
+          "ok": 0,
+          "note": "overseas restriction; CT scanning available in UK"
+        },
+        {
+          "cat": "Software",
+          "desc": "Build-simulation (FEA) software licences",
+          "claimed": 44000,
+          "ok": 22000,
+          "note": "also used for routine customer quotes; 50%"
+        },
+        {
+          "cat": "Software",
+          "desc": "ERP / Microsoft 365 licences",
+          "claimed": 9800,
+          "ok": 0,
+          "note": "general business software"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Gareth Pollock",
+          "pct": 0.6,
+          "ok_pct": 0.35,
+          "claimed": 24030,
+          "ok": 14018,
+          "note": "includes production builds",
+          "extra": {}
+        },
+        {
+          "name": "Neil Hambleton",
+          "pct": 0.25,
+          "ok_pct": 0.1,
+          "claimed": 32812,
+          "ok": 13125,
+          "note": "mostly commercial",
+          "extra": {}
+        }
+      ]
+    },
+    "C03": {
+      "company": "Marrowgate Software Ltd",
+      "grade": "C",
+      "valid": true,
+      "issues": [
+        "Only P1 (Weft ledger) genuinely qualifies; P2 UI/LLM-API is UX/business uncertainty; P3 cloud migration routine (CIRD81980 CS1); P4 API integration routine",
+        "Engineers at 85-90% from retrospective interviews (Sept 2025), no timesheets",
+        "Product manager 60%, CEO 40%",
+        "All production AWS hosting (\u00a3184k) claimed as cloud computing",
+        "Salesforce/Figma/Slack in software",
+        "Routine integration subcontract claimed",
+        "Evidence quality drops sharply after P1 (Jira refs only for P1)"
+      ],
+      "claimed_qe": 880581,
+      "correct_qe": 200692,
+      "claimed_scheme": "sme-2023",
+      "correct_scheme": "sme-2023",
+      "claimed_benefit": 163788,
+      "correct_benefit": 37329,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "EPW (unconnected)",
+          "desc": "Contract developers via agency \u00a396,000 x 65%",
+          "claimed": 62400,
+          "ok": 15600,
+          "note": "only 25% on ledger project"
+        },
+        {
+          "cat": "Software",
+          "desc": "JetBrains, GitHub, Jira, Figma, Slack, Salesforce",
+          "claimed": 38600,
+          "ok": 6200,
+          "note": "Salesforce/Figma/Slack not R&D"
+        },
+        {
+          "cat": "Data & cloud",
+          "desc": "AWS cloud computing",
+          "claimed": 184000,
+          "ok": 21000,
+          "note": "only test cluster for ledger experiments"
+        },
+        {
+          "cat": "Subcontract (UK, unconnected)",
+          "desc": "Open Banking aggregator integration \u2013 Plaidwise Ltd \u00a330,000 x 65%",
+          "claimed": 19500,
+          "ok": 0,
+          "note": "routine integration"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Elena Varga",
+          "pct": 0.7,
+          "ok_pct": 0.35,
+          "claimed": 86439,
+          "ok": 43219,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Kwame Asante",
+          "pct": 0.9,
+          "ok_pct": 0.6,
+          "claimed": 92959,
+          "ok": 61973,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Rosie Tamworth",
+          "pct": 0.85,
+          "ok_pct": 0.3,
+          "claimed": 71638,
+          "ok": 25284,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Ben Lacey",
+          "pct": 0.85,
+          "ok_pct": 0.15,
+          "claimed": 57501,
+          "ok": 10147,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Chen Wu",
+          "pct": 0.85,
+          "ok_pct": 0.15,
+          "claimed": 55481,
+          "ok": 9791,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Freya Doyle",
+          "pct": 0.8,
+          "ok_pct": 0.0,
+          "claimed": 50317,
+          "ok": 0,
+          "note": "UI redesign \u2013 routine",
+          "extra": {}
+        },
+        {
+          "name": "Sam Okoro",
+          "pct": 0.75,
+          "ok_pct": 0.1,
+          "claimed": 56082,
+          "ok": 7478,
+          "note": "cloud migration \u2013 routine",
+          "extra": {}
+        },
+        {
+          "name": "Jessica Harrow",
+          "pct": 0.6,
+          "ok_pct": 0.0,
+          "claimed": 49142,
+          "ok": 0,
+          "note": "product mgmt not QIA",
+          "extra": {}
+        },
+        {
+          "name": "Oliver Marrow",
+          "pct": 0.4,
+          "ok_pct": 0.0,
+          "claimed": 56522,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        }
+      ]
+    },
+    "C04": {
+      "company": "Hollin & Rye Kitchens Ltd",
+      "grade": "D",
+      "valid": true,
+      "issues": [
+        "Competent professional is a chef with no scientific background",
+        "Uncertainties are business/sensory (diner acceptance, food cost margins)",
+        "Whole kitchen brigade at 25%; head chefs 50%",
+        "Ingredients for food sold to customers claimed (\u00a364k)",
+        "Capital equipment (sous-vide, fermentation chamber) in consumables",
+        "Evidence = menus, Instagram, WhatsApp",
+        "Quorlane boilerplate shared verbatim with C05, C06",
+        "Only P3 shelf-life work is borderline-qualifying"
+      ],
+      "claimed_qe": 379051,
+      "correct_qe": 16578,
+      "claimed_scheme": "merged-profit",
+      "correct_scheme": "merged-profit",
+      "claimed_benefit": 56858,
+      "correct_benefit": 2487,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "Consumables",
+          "desc": "Ingredients for menu development",
+          "claimed": 64000,
+          "ok": 0,
+          "note": "food served/sold; menu dev not R&D"
+        },
+        {
+          "cat": "Consumables",
+          "desc": "Sous-vide and fermentation equipment",
+          "claimed": 22500,
+          "ok": 0,
+          "note": "capital"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Marcus Rye",
+          "pct": 0.6,
+          "ok_pct": 0.0,
+          "claimed": 59834,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Isla Hollin",
+          "pct": 0.3,
+          "ok_pct": 0.0,
+          "claimed": 31699,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Tobias Wren",
+          "pct": 0.5,
+          "ok_pct": 0.0,
+          "claimed": 24320,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Carmen Ruiz",
+          "pct": 0.5,
+          "ok_pct": 0.0,
+          "claimed": 23726,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Kitchen brigade (14 FTE)",
+          "pct": 0.25,
+          "ok_pct": 0.0,
+          "claimed": 110062,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Ella Brandt",
+          "pct": 0.8,
+          "ok_pct": 0.2,
+          "claimed": 35110,
+          "ok": 8778,
+          "note": "shelf-life work for retail range is borderline",
+          "extra": {}
+        }
+      ]
+    },
+    "C05": {
+      "company": "Brackenmoor Groundworks Ltd",
+      "grade": "D",
+      "valid": false,
+      "issues": [
+        "CNF filed 03/02/2026, after the 31/01/2026 deadline: claim invalid",
+        "Client-funded fixed-price contract; routine engineering risk managed to established practice (Collins Construction pattern)",
+        "Design by external consultant engaged for client, claimed as subcontracted R&D",
+        "Materials incorporated into client's building and plant hire claimed as consumables",
+        "Competent professional not an engineer; 'advance' is the company's own capability",
+        "Directors 60-70%, site operatives 20%, estimator 50%, set in a workshop",
+        "P2 = adoption of vendor apps",
+        "Quorlane boilerplate shared with C04, C06"
+      ],
+      "claimed_qe": 619596,
+      "correct_qe": 2842,
+      "claimed_scheme": "merged-profit",
+      "correct_scheme": "merged-profit",
+      "claimed_benefit": 92939,
+      "correct_benefit": 0,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "Subcontract (UK, unconnected)",
+          "desc": "Pennine Structural Consultants \u2013 basement design \u00a384,000 x 65%",
+          "claimed": 54600,
+          "ok": 0,
+          "note": "design fee charged to client; routine engineering"
+        },
+        {
+          "cat": "Consumables",
+          "desc": "Concrete, sheet piles, rebar for Hallam Rd basement",
+          "claimed": 212000,
+          "ok": 0,
+          "note": "materials incorporated in client's building"
+        },
+        {
+          "cat": "Consumables",
+          "desc": "Plant hire",
+          "claimed": 46000,
+          "ok": 0,
+          "note": "not consumable"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Darren Kettlewell",
+          "pct": 0.7,
+          "ok_pct": 0.0,
+          "claimed": 79275,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Paul Kettlewell",
+          "pct": 0.6,
+          "ok_pct": 0.0,
+          "claimed": 62910,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Amira Saleh",
+          "pct": 0.8,
+          "ok_pct": 0.05,
+          "claimed": 45480,
+          "ok": 2842,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Site operatives (11 FTE)",
+          "pct": 0.2,
+          "ok_pct": 0.0,
+          "claimed": 93306,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Jade Holroyd",
+          "pct": 0.5,
+          "ok_pct": 0.0,
+          "claimed": 26025,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        }
+      ]
+    },
+    "C06": {
+      "company": "Lantern Lane Joinery Ltd",
+      "grade": "E",
+      "valid": false,
+      "issues": [
+        "First claim with no CNF: invalid",
+        "Dividends included in director staff costs (\u00a378k gross)",
+        "Company secretary at 80%",
+        "CNC router (capital) claimed as consumable",
+        "Timber for sold orders, van lease/fuel, CAD licence claimed",
+        "No baseline, generic business uncertainties, no contemporaneous evidence",
+        "Template narrative shared with C04/C05 (Quorlane); cold-call origin, 30% contingent fee",
+        "Benefit disproportionate to a 4-person, \u00a3640k-turnover business"
+      ],
+      "claimed_qe": 224514,
+      "correct_qe": 0,
+      "claimed_scheme": "merged-profit",
+      "correct_scheme": "merged-profit",
+      "claimed_benefit": 33677,
+      "correct_benefit": 0,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "Consumables",
+          "desc": "CNC router (Bramwell 2030 Pro)",
+          "claimed": 38500,
+          "ok": 0,
+          "note": "capital equipment"
+        },
+        {
+          "cat": "Consumables",
+          "desc": "Oak, walnut, MDF, finishes \u2013 prototype and development materials",
+          "claimed": 41200,
+          "ok": 0,
+          "note": "used in sold furniture"
+        },
+        {
+          "cat": "Software",
+          "desc": "CAD/CAM licence",
+          "claimed": 2400,
+          "ok": 0,
+          "note": "routine design"
+        },
+        {
+          "cat": "Other",
+          "desc": "Van lease & fuel",
+          "claimed": 9600,
+          "ok": 0,
+          "note": "excluded"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Craig Lantern",
+          "pct": 1.0,
+          "ok_pct": 0.0,
+          "claimed": 61049,
+          "ok": 0,
+          "note": "salary + dividends claimed as staff cost",
+          "extra": {
+            "dividends": 48000
+          }
+        },
+        {
+          "name": "Michelle Lantern",
+          "pct": 0.8,
+          "ok_pct": 0.0,
+          "claimed": 34439,
+          "ok": 0,
+          "note": "",
+          "extra": {
+            "dividends": 30000
+          }
+        },
+        {
+          "name": "Josh Pearce",
+          "pct": 0.7,
+          "ok_pct": 0.0,
+          "claimed": 24900,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Kieran Doyle",
+          "pct": 0.7,
+          "ok_pct": 0.0,
+          "claimed": 12426,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        }
+      ]
+    },
+    "C07": {
+      "company": "Quillon Hydrogen Ltd",
+      "grade": "B",
+      "valid": true,
+      "issues": [
+        "ERIS intensity inflated by excluding \u00a3420k pilot-plant costs from denominator: true ~23.5% < 30%, so merged-loss (16.2%) not ERIS",
+        "Overseas Dutch AST lab justified by availability/time, which is not a permitted condition: \u00a378k disallowed",
+        "Commercial Director at 10%",
+        "Science and evidence otherwise strong; grant handled correctly"
+      ],
+      "claimed_qe": 715519,
+      "correct_qe": 626794,
+      "claimed_scheme": "eris",
+      "correct_scheme": "merged-loss",
+      "claimed_benefit": 192975,
+      "correct_benefit": 101541,
+      "corrected_intensity_pct": 23.5,
+      "disallowed_cost_lines": [
+        {
+          "cat": "Subcontract (unconnected)",
+          "desc": "Stichting Waterstof Testlab \u2013 accelerated stress testing \u00a3120,000 x 65%",
+          "claimed": 78000,
+          "ok": 0,
+          "note": "overseas; 'only facility' is availability, not a permitted condition"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Owen Bryce",
+          "pct": 0.1,
+          "ok_pct": 0.0,
+          "claimed": 10725,
+          "ok": 0,
+          "note": "sales only",
+          "extra": {}
+        }
+      ]
+    },
+    "C08": {
+      "company": "Holt Freight Intelligence Ltd",
+      "grade": "E",
+      "valid": true,
+      "issues": [
+        "Connected EPW (C10 staff) claimed at payment incl. 15% markup instead of lower of payment/provider cost",
+        "\u00a3210k 'subcontract' to C09 for the same Lodestar work: double count within the claim",
+        "Most Lodestar work is off-the-shelf model tuning (CIRD81980 CS2); ~35% qualifies",
+        "Production inference cloud claimed",
+        "Same engineers also claimed by C09 and C10"
+      ],
+      "claimed_qe": 901461,
+      "correct_qe": 205807,
+      "claimed_scheme": "merged-profit",
+      "correct_scheme": "merged-profit",
+      "claimed_benefit": 135219,
+      "correct_benefit": 30871,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "EPW (connected)",
+          "desc": "Holt Engineering Services Ltd \u2013 Lodestar engineering staff recharge (5 FTE)",
+          "claimed": 498272,
+          "ok": 151648,
+          "note": "connected EPW = lower of payment and provider cost; and only genuinely-qualifying ~35% of Lodestar work (much is off-the-shelf model tuning)"
+        },
+        {
+          "cat": "Subcontract (connected)",
+          "desc": "Holt Data Labs \u2013 'forecasting model development' \u00a3210,000",
+          "claimed": 210000,
+          "ok": 0,
+          "note": "same work as EPW line \u2013 double count"
+        },
+        {
+          "cat": "Data & cloud",
+          "desc": "Azure ML compute & telematics dataset licence",
+          "claimed": 88000,
+          "ok": 30000,
+          "note": "production inference excluded"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Gavin Holt",
+          "pct": 0.3,
+          "ok_pct": 0.05,
+          "claimed": 49519,
+          "ok": 8253,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Priyanka Mehta",
+          "pct": 0.7,
+          "ok_pct": 0.2,
+          "claimed": 55670,
+          "ok": 15906,
+          "note": "",
+          "extra": {}
+        }
+      ]
+    },
+    "C09": {
+      "company": "Holt Data Labs Ltd",
+      "grade": "E",
+      "valid": true,
+      "issues": [
+        "Contractor to C08: under merged scheme the customer (C08) claims, not C09",
+        "Incorporated 3 Apr 2024, days before agreements: shell with 2 non-claimed employees",
+        "Claims 'seconded' Achterberg/Grieve at 90%, who are employed and claimed by C10 (combined 185%)",
+        "Connected 'modelling support' fee to C10 is the same engineers again",
+        "Azure costs re-invoiced from C08: duplicate",
+        "ERIS as standalone SME: ignores linked group; loss is artificial (intra-group fees)",
+        "Omits group relationships; 'Polaris' = Lodestar"
+      ],
+      "claimed_qe": 473529,
+      "correct_qe": 0,
+      "claimed_scheme": "eris",
+      "correct_scheme": "none",
+      "claimed_benefit": 118499,
+      "correct_benefit": 0,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "Data & cloud",
+          "desc": "Azure ML compute (recharged)",
+          "claimed": 88000,
+          "ok": 0,
+          "note": "duplicate of C08 cost"
+        },
+        {
+          "cat": "Subcontract (UK, connected)",
+          "desc": "Holt Engineering Services \u2013 modelling support \u00a3140,000",
+          "claimed": 140000,
+          "ok": 0,
+          "note": "same engineers again"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Gavin Holt",
+          "pct": 0.4,
+          "ok_pct": 0.0,
+          "claimed": 66026,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Dr Simon Achterberg",
+          "pct": 0.9,
+          "ok_pct": 0.0,
+          "claimed": 101513,
+          "ok": 0,
+          "note": "same person employed by C10",
+          "extra": {}
+        },
+        {
+          "name": "Natasha Grieve",
+          "pct": 0.9,
+          "ok_pct": 0.0,
+          "claimed": 77990,
+          "ok": 0,
+          "note": "same person employed by C10",
+          "extra": {}
+        }
+      ]
+    },
+    "C10": {
+      "company": "Holt Engineering Services Ltd",
+      "grade": "E",
+      "valid": true,
+      "issues": [
+        "Staff provider bearing no R&D risk (reimbursed cost+15%), claims engineers as own R&D",
+        "Same 5 engineers recharged to C08 (claimed there) and partly to C09",
+        "Platform licence recharged to C08 and claimed here too"
+      ],
+      "claimed_qe": 513134,
+      "correct_qe": 0,
+      "claimed_scheme": "merged-profit",
+      "correct_scheme": "none",
+      "claimed_benefit": 76970,
+      "correct_benefit": 0,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "Software",
+          "desc": "Databricks-style platform licence",
+          "claimed": 52000,
+          "ok": 0,
+          "note": "recharged to C08"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Dr Simon Achterberg",
+          "pct": 0.95,
+          "ok_pct": 0.0,
+          "claimed": 107152,
+          "ok": 0,
+          "note": "employed here; recharged to C08 and C09",
+          "extra": {}
+        },
+        {
+          "name": "Natasha Grieve",
+          "pct": 0.95,
+          "ok_pct": 0.0,
+          "claimed": 82323,
+          "ok": 0,
+          "note": "employed here; recharged to C08 and C09",
+          "extra": {}
+        },
+        {
+          "name": "Imran Qadir",
+          "pct": 0.95,
+          "ok_pct": 0.0,
+          "claimed": 78937,
+          "ok": 0,
+          "note": "employed here; recharged to C08 and C09",
+          "extra": {}
+        },
+        {
+          "name": "Bethany Coles",
+          "pct": 0.95,
+          "ok_pct": 0.0,
+          "claimed": 69909,
+          "ok": 0,
+          "note": "employed here; recharged to C08 and C09",
+          "extra": {}
+        },
+        {
+          "name": "Luke Fensome",
+          "pct": 0.95,
+          "ok_pct": 0.0,
+          "claimed": 73294,
+          "ok": 0,
+          "note": "employed here; recharged to C08 and C09",
+          "extra": {}
+        },
+        {
+          "name": "Gavin Holt",
+          "pct": 0.3,
+          "ok_pct": 0.0,
+          "claimed": 49519,
+          "ok": 0,
+          "note": "",
+          "extra": {}
+        }
+      ]
+    },
+    "C11": {
+      "company": "Excelcion Limited",
+      "grade": "C",
+      "valid": true,
+      "issues": [
+        "P1 folds firm-wide rollout of an approved third-party AI assistant (training, licences for 1,200 seats) into R&D",
+        "Claim calls Edith 'proprietary' with 'reliability not previously achieved'; website Insights (2026-05-19) says approved assistant, results 'encouraging but uneven'",
+        "Claim says P1 started Feb 2025, before May 2025 AI guidance and the 22 Sep 2025 first cohort",
+        "US Halvorsen Pike data scientists (connected, overseas) claimed: \u00a3310k",
+        "Hydraulic modellers at 55% incl. fee-earning scheme modelling; P2 core is genuine",
+        "P3 mostly client data-centre design (billed); only the test rig qualifies",
+        "P4 ERP/data platform routine IT; \u00a3720k cloud",
+        "Connected EPW from Tarnbeck at recharge not provider cost",
+        "Cost history from TAX_RD_EXTRACT with only a year-on-year totals check"
+      ],
+      "footprint_checks": [
+        "insights/ai-assistance-for-engineers-lessons-so-far (2026-05-19, McGregor): contradicts 'proprietary'",
+        "news 2025-09-22: first AI cohort date",
+        "insights/what-data-science-can-do-for-an-engineer (2025-11-12, Ritchie): supports P2 competence, cautious tone",
+        "insights/cooling-dense-computing (2025-06-10, Norris): design practice, not research",
+        "leadership pages: Scott Lam Head of R&I, McGregor CDIO from Jan 2025",
+        "projects: flood-storage-river-catchment (Rivenhaven-type client scheme)"
+      ],
+      "claimed_qe": 5046305,
+      "correct_qe": 1195107,
+      "claimed_scheme": "merged-profit",
+      "correct_scheme": "merged-profit",
+      "claimed_benefit": 756946,
+      "correct_benefit": 179266,
+      "corrected_intensity_pct": null,
+      "disallowed_cost_lines": [
+        {
+          "cat": "EPW (connected)",
+          "desc": "Tarnbeck Modelling Services Ltd \u2013 surrogate-model modellers recharge",
+          "claimed": 482000,
+          "ok": 273000,
+          "note": "connected: lower of payment & provider cost; only surrogate R&D share"
+        },
+        {
+          "cat": "EPW (connected)",
+          "desc": "Halvorsen Pike Engineers Inc \u2013 data scientists, assistant evaluation",
+          "claimed": 310000,
+          "ok": 0,
+          "note": "overseas restriction"
+        },
+        {
+          "cat": "Software",
+          "desc": "Approved AI assistant enterprise licences \u2013 1,200 seats",
+          "claimed": 540000,
+          "ok": 30000,
+          "note": "firm-wide productivity tool; only dev/eval seats"
+        },
+        {
+          "cat": "Data & cloud",
+          "desc": "Lighthouse data platform cloud consumption",
+          "claimed": 720000,
+          "ok": 90000,
+          "note": "only experimental workloads"
+        }
+      ],
+      "staff_adjustments": [
+        {
+          "name": "Scott Lam",
+          "pct": 0.5,
+          "ok_pct": 0.3,
+          "claimed": 70425,
+          "ok": 42255,
+          "note": "Growth Fund oversight",
+          "extra": {}
+        },
+        {
+          "name": "Dermot McGregor",
+          "pct": 0.4,
+          "ok_pct": 0.1,
+          "claimed": 88500,
+          "ok": 22125,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Ewa Walsh",
+          "pct": 0.2,
+          "ok_pct": 0.05,
+          "claimed": 42090,
+          "ok": 10522,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Ian Ritchie",
+          "pct": 0.9,
+          "ok_pct": 0.7,
+          "claimed": 98685,
+          "ok": 76755,
+          "note": "",
+          "extra": {}
+        },
+        {
+          "name": "Applied AI and Automation team (12 FTE)",
+          "pct": 0.85,
+          "ok_pct": 0.35,
+          "claimed": 929602,
+          "ok": 382778,
+          "note": "includes rollout & support of approved AI assistant",
+          "extra": {}
+        },
+        {
+          "name": "Digital Delivery \u2013 Keystone & Lighthouse (18 FTE)",
+          "pct": 0.6,
+          "ok_pct": 0.0,
+          "claimed": 893790,
+          "ok": 0,
+          "note": "ERP automation & data platform \u2013 routine IT",
+          "extra": {}
+        },
+        {
+          "name": "Water: hydraulic modelling (10 FTE)",
+          "pct": 0.55,
+          "ok_pct": 0.2,
+          "claimed": 421988,
+          "ok": 153450,
+          "note": "mostly fee-earning scheme modelling",
+          "extra": {}
+        },
+        {
+          "name": "Buildings: mechanical engineers, dense-compute cooling (9 FTE)",
+          "pct": 0.5,
+          "ok_pct": 0.05,
+          "claimed": 372225,
+          "ok": 37222,
+          "note": "client data-centre design, billed",
+          "extra": {}
+        }
+      ]
+    }
+  },
+  "cross_claim_links": [
+    {
+      "link": "Holt cluster",
+      "claims": [
+        "C08",
+        "C09",
+        "C10"
+      ],
+      "evidence": [
+        "Shared registered office Suite 4, Calder House, 9 Wharf Approach, Wakefield ZZ1 5RS",
+        "Director Gavin Holt on all three; parent Veridian Holt Holdings Ltd",
+        "Same Jira IDs LDS-214, LDS-377, LDS-502",
+        "Achterberg & Grieve: C10 95% + C09 90% = 185%",
+        "C10 staff recharged to C08 at cost+15% and claimed there",
+        "Azure subscription in C08 re-invoiced to C09",
+        "Near-duplicate sentence on '8% of origin\u2013destination pairs'",
+        "Near-identical competent-professional judgement paragraph by Dr Achterberg in all three",
+        "Achterberg CV inconsistent across packs (8 vs 14 vs 15+ years; different doctorate titles; three different employers/job titles)",
+        "C09 statement dated 12 Aug 2025 vs C08 26 Mar 2026: same expert, different roles"
+      ],
+      "combined_claimed_net": 330688,
+      "legit_net": 30871
+    },
+    {
+      "link": "Quorlane boilerplate",
+      "claims": [
+        "C04",
+        "C05",
+        "C06"
+      ],
+      "evidence": [
+        "Verbatim DSIT 'paragraphs 3, 6 and 13' sentence",
+        "Verbatim AIF closing line",
+        "Shared heading template",
+        "Near-duplicate 'Prototypes were iteratively developed\u2026' (C05/C06)"
+      ]
+    },
+    {
+      "link": "Vantrell agent (red herring)",
+      "claims": [
+        "C03",
+        "C08"
+      ],
+      "evidence": [
+        "Same agent, no substantive overlap"
+      ]
+    }
+  ]
+}
